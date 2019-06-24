@@ -12,9 +12,57 @@
 
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" type="text/babel"></script>
-    <!-- <script type="text/babel"></script> -->
-    <script src="App.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- <script type="text/babel" src="App.js"></script> -->
+
+    <script type="text/babel">
+        const appRoot = document.querySelector('#application-root');
+
+        function App(props) {
+            console.log(props);
+            return (
+                <header>
+                    <img src={`https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg`} alt={`White woman with curly dark hair, wearing a yellow sweater with images of zebras, blue pants. Arms crossed, staring straigh at the camera`}></img>
+                    <h1>Sally Student</h1>
+                    <address>
+                        <a className="email" href={`mailto:sallystudent@gmail.com`}>sallystudent@gmail.com</a><br/>
+                        <a href={`tel:+2075555342`}>207-555-5342</a><br/>
+                    </address>
+                </header>
+
+                <main>
+                    <section>
+                        <h2>Education</h2>
+                        <ul>
+                            <li>Portland State University 2001-2005</li>
+                            <li>Portland Community Collage 2000-2001</li>
+                        </ul>
+                    </section>
+                
+                    <section>
+                        <h2>Employment</h2>
+                        <h3>Artist Rep Theatre</h3>
+                        <ul>
+                            <li>Director of Development</li>
+                            <li>2015-Present</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue libero urna, ultricies sollicitudin urna venenatis non. Donec condimentum posuere dolor, non lobortis justo feugiat sit amet.</li>
+                        </ul>
+                        <h3>Grocery Outlet</h3>
+                        <ul>
+                            <li>General Manager</li>
+                            <li>2013-2015</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue libero urna, ultricies sollicitudin urna venenatis non. Donec condimentum posuere dolor, non lobortis justo feugiat sit amet.</li>
+                        </ul>
+                    </section>
+                </main>
+            );
+        };
+
+        ReactDOM.render(
+            <App />,
+            appRoot
+        );
+    </script>
 
 </body>
 </html>
